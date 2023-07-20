@@ -29,7 +29,7 @@ const userSchema = new mongoose.Schema({
         type: String,
         default: ''
     },
-    zip :{
+    zip: {
         type: String,
         default: ''
     },
@@ -53,4 +53,3 @@ userSchema.set('toJSON', {
 });
 
 exports.User = mongoose.model('User', userSchema);
-exports.userSchema = userSchema;

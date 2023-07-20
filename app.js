@@ -16,6 +16,7 @@ app.use(bodyParser.json());
 app.use(morgan('tiny'));
 app.use(authJwt());
 app.use(errorHandler);
+app.use('/public/uploads', express.static(__dirname + '/public/uploads'))
 
 //Routes
 const categoriesRoutes = require('./routes/categories');
@@ -39,15 +40,15 @@ mongoose.connect(process.env.CONNECTION_STRING, {
     useUnifiedTopology: true,
     dbName: 'eshop-database'
 })
-.then(()=>{
-    console.log('Database Connection is ready...')
-})
-.catch((err)=> {
-    console.log(err);
-})
+    .then(() => {
+        console.log('Database Connection is ready...')
+    })
+    .catch((err) => {
+        console.log(err);
+    })
 
 //Server
-app.listen(3000, ()=>{
+app.listen(3000, () => {
 
     console.log(`server is running ${api}`);
 })
