@@ -5,3 +5,12 @@
 4. `Application server`: Application verifies and processes API call
 
 ### Using multer library for images upload
+
+
+### frontend:
+- module
+    - component
+    - service
+- component from 1 module can communicate to another component in another component
+- backend
+- db

@@ -42,7 +42,8 @@ const userSchema = new mongoose.Schema({
         default: ''
     }
 
-});
+},
+    { timestamps: true });
 
 userSchema.virtual('id').get(function () {
     return this._id.toHexString();

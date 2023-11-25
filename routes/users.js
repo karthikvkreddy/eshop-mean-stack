@@ -58,7 +58,6 @@ router.post('/api/v1/users/register', async (req, res) => {
     let user = new User({
         name: req.body.name,
         email: req.body.email,
-        color: req.body.color,
         passwordHash: bcrypt.hashSync(req.body.password, 10),
         phone: req.body.phone,
         isAdmin: req.body.isAdmin,
